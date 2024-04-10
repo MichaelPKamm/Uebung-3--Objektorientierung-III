@@ -76,11 +76,11 @@ class polygon(Figur):
 
     def umfang(self):
         u = 0
-        for i in range(1, len(self.punkte)):
+        for i in range(0, len(self.punkte)):
             j = (i + 1)%(len(self.punkte))
             u = u + math.sqrt((self.punkte[j].x - self.punkte[i].x)**2 + 
                               (self.punkte[j].y - self.punkte[i].y)**2)
-            return u
+        return u
     
     def __str__(self):
         string = ', '.join(str(i) for i in self.punkte)
